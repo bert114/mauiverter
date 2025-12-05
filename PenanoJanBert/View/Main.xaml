@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PenanoJanBert.View.Main"
+             >
+    <ScrollView BackgroundColor="{StaticResource bg}">
+        
+        
+
+        <VerticalStackLayout>
+            <Image Source="bgxmas.jpg" Margin="0,0,0,0"
+                   HeightRequest="800"
+                   Aspect="Fill"/>
+
+            <StackLayout Margin="0,-700,0,0">
+                
+            <Label  
+                   HorizontalTextAlignment="Center"
+                    Text="MAUIVERTER"
+                    FontSize="{StaticResource font-header}"
+                    FontAttributes="Bold"
+                    FontFamily="xmas"
+                    TextColor="{StaticResource clr-primary}"  
+                   />
+
+
+                <Grid  ColumnDefinitions="1*,1*,1*" RowDefinitions="auto ,auto , auto" ColumnSpacing="8" RowSpacing="8" Padding="20" >
+
+                    <!-- First Column info-->
+                    <Frame
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="0"
+    
+    
+    >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="infoicon.png" WidthRequest="50" HeightRequest="60"/>
+                            <Label Text="Information" HorizontalOptions="Center" 
+                                   FontAttributes="Bold" 
+                                   FontSize="{StaticResource font-label}"
+                                   FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+
+                    <!-- 2nd Column -->
+                    <Frame
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="1"
+        >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="volume.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Volume" HorizontalOptions="Center"
+                               FontSize="{StaticResource font-label}"
+                               FontFamily="xmas"
+                               FontAttributes="Bold"/>  
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+
+                    <!--ruler-->
+                    <Frame
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        BackgroundColor="{StaticResource bg-light}"
+     
+    >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="ruler.png" WidthRequest="60" HeightRequest="60"
+               />
+                            <Label Text="Length" HorizontalOptions="Center" 
+                    FontFamily="xmas"
+            FontSize="{StaticResource font-label}"
+            FontAttributes="Bold"
+            Style="{StaticResource box-label}"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+                    <!--mass-->
+                    <Frame
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill"
+    CornerRadius="10"
+    BackgroundColor="{StaticResource bg-light}"
+    Grid.Column="0"
+    Grid.Row="1"
+    >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="mass.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Length" HorizontalOptions="Center" 
+        FontSize="{StaticResource font-label}"
+        FontAttributes="Bold"
+        Style="{StaticResource box-label}"
+        FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+
+                    <!--mass-->
+
+
+
+                    <!--mass-->
+                    <Frame
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill"
+    CornerRadius="10"
+    BackgroundColor="{StaticResource bg-light}"
+    Grid.Column="0"
+    Grid.Row="1">
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="mass.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Mass" HorizontalOptions="Center" 
+                FontSize="{StaticResource font-label}"
+                FontAttributes="Bold"
+                Style="{StaticResource box-label}"
+               FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+
+
+                    <!--temp-->
+                    <Frame
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill"
+    CornerRadius="10"
+    BackgroundColor="{StaticResource bg-light}"
+    Grid.Column="1"
+    Grid.Row="1"
+    >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="temp.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Temperature" HorizontalOptions="Center" 
+                FontSize="{StaticResource font-label}"
+                FontAttributes="Bold"
+                Style="{StaticResource box-label}"
+                FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+                    <!--Energy-->
+                    <Frame
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill"
+    CornerRadius="10"
+    BackgroundColor="{StaticResource bg-light}"
+    Grid.Column="3"
+    Grid.Row="1"
+    >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="energy.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Energy" HorizontalOptions="Center" 
+               FontSize="{StaticResource font-label}"
+               FontAttributes="Bold"
+               Style="{StaticResource box-label}"
+               FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+                    <!--area-->
+                    <Frame
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
+        CornerRadius="10"
+        BackgroundColor="{StaticResource bg-light}"
+        Grid.Column="0"
+        Grid.Row="2"
+        >
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="area.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Area" HorizontalOptions="Center" 
+            FontSize="{StaticResource font-label}"
+            FontAttributes="Bold"
+            Style="{StaticResource box-label}"
+            FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+                    <!--speed-->
+                    <Frame
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill"
+    CornerRadius="10"
+    BackgroundColor="{StaticResource bg-light}"
+    Grid.Column="1"
+    Grid.Row="2">
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="speed.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Speed" HorizontalOptions="Center" 
+            FontSize="{StaticResource font-label}"
+            FontAttributes="Bold"
+            Style="{StaticResource box-label}"
+           FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+                    <!--duration-->
+                    <Frame
+     HorizontalOptions="Fill"
+     VerticalOptions="Fill"
+     CornerRadius="10"
+     BackgroundColor="{StaticResource bg-light}"
+     Grid.Column="3"
+     Grid.Row="2">
+
+                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
+                            <Image Source="duration.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="Duration" HorizontalOptions="Center" 
+                FontSize="{StaticResource font-label}"
+                FontAttributes="Bold"
+                Style="{StaticResource box-label}"
+                FontFamily="xmas"/>
+                        </VerticalStackLayout>
+
+
+
+                    </Frame>
+
+
+
+
+
+
+
+
+
+
+
+
+                </Grid>
+
+            </StackLayout>
+            
+            
+            
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>

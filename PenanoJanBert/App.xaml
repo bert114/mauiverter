@@ -1,0 +1,53 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PenanoJanBert"
+             x:Class="PenanoJanBert.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary Source="/Resources/Styles/Config.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+
+            <!-- GLOBAL RESET: Applies to ALL controls of each type -->
+
+            <!-- Reset all labels -->
+            
+            
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+         
+            <!-- Reset all layouts -->
+            <Style TargetType="VerticalStackLayout">
+                <Setter Property="Spacing" Value="0" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+            <Style TargetType="HorizontalStackLayout">
+                <Setter Property="Spacing" Value="0" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+            <!-- Reset pages -->
+            <Style TargetType="ContentPage">
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

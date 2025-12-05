@@ -1,0 +1,9 @@
+namespace PenanoJanBert.View;
+
+public partial class Main : ContentPage
+{
+	public Main()
+	{
+		InitializeComponent();
+	}
+}
