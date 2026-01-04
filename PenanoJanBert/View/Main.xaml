@@ -24,7 +24,7 @@
                    />
 
 
-                <Grid  ColumnDefinitions="1*,1*,1*" RowDefinitions="auto ,auto , auto" ColumnSpacing="8" RowSpacing="8" Padding="20" >
+                <Grid ColumnDefinitions="1*,1*,1*" RowDefinitions="auto ,auto , auto" ColumnSpacing="8" RowSpacing="8" Padding="20" >
 
                     <!-- First Column info-->
                     <Frame
@@ -32,10 +32,13 @@
                         VerticalOptions="Fill"
                         CornerRadius="10"
                         BackgroundColor="{StaticResource bg-light}"
-                        Grid.Column="0"
-    
-    
-    >
+                        Grid.Column="0">
+                        
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  CommandParameter="Information"
+                                 />
+                        </Frame.GestureRecognizers>
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="infoicon.png" WidthRequest="50" HeightRequest="60"/>
@@ -60,6 +63,10 @@
                         Grid.Column="1"
         >
 
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="Volume"/>
+                        </Frame.GestureRecognizers>
+                        
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="volume.png" WidthRequest="60" HeightRequest="60"/>
                             <Label Text="Volume" HorizontalOptions="Center"
@@ -82,17 +89,25 @@
                         Grid.Column="3"
                         Grid.Row="0"
                         BackgroundColor="{StaticResource bg-light}"
+                        
      
     >
 
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" 
+                                                  CommandParameter="Length"/>
+                        </Frame.GestureRecognizers>
+
+
+
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
-                            <Image Source="ruler.png" WidthRequest="60" HeightRequest="60"
-               />
-                            <Label Text="Length" HorizontalOptions="Center" 
-                    FontFamily="xmas"
-            FontSize="{StaticResource font-label}"
-            FontAttributes="Bold"
-            Style="{StaticResource box-label}"/>
+                            <Image Source="ruler.png" WidthRequest="60" HeightRequest="60"/>
+                            <Label 
+                                Text="Length" HorizontalOptions="Center" 
+                                FontFamily="xmas"
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"/>        
                         </VerticalStackLayout>
 
 
@@ -100,51 +115,29 @@
                     </Frame>
 
 
+                   
                     <!--mass-->
                     <Frame
-    HorizontalOptions="Fill"
-    VerticalOptions="Fill"
-    CornerRadius="10"
-    BackgroundColor="{StaticResource bg-light}"
-    Grid.Column="0"
-    Grid.Row="1"
-    >
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="0"
+                        Grid.Row="1">
 
-                        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
-                            <Image Source="mass.png" WidthRequest="60" HeightRequest="60"/>
-                            <Label Text="Length" HorizontalOptions="Center" 
-        FontSize="{StaticResource font-label}"
-        FontAttributes="Bold"
-        Style="{StaticResource box-label}"
-        FontFamily="xmas"/>
-                        </VerticalStackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  CommandParameter="Mass"/>
+                        </Frame.GestureRecognizers>
 
-
-
-                    </Frame>
-
-
-
-                    <!--mass-->
-
-
-
-                    <!--mass-->
-                    <Frame
-    HorizontalOptions="Fill"
-    VerticalOptions="Fill"
-    CornerRadius="10"
-    BackgroundColor="{StaticResource bg-light}"
-    Grid.Column="0"
-    Grid.Row="1">
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="mass.png" WidthRequest="60" HeightRequest="60"/>
                             <Label Text="Mass" HorizontalOptions="Center" 
-                FontSize="{StaticResource font-label}"
-                FontAttributes="Bold"
-                Style="{StaticResource box-label}"
-               FontFamily="xmas"/>
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/>
                         </VerticalStackLayout>
 
 
@@ -156,21 +149,29 @@
 
                     <!--temp-->
                     <Frame
-    HorizontalOptions="Fill"
-    VerticalOptions="Fill"
-    CornerRadius="10"
-    BackgroundColor="{StaticResource bg-light}"
-    Grid.Column="1"
-    Grid.Row="1"
-    >
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        >
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Tapped="TapGestureRecognizer_Tapped"
+                                CommandParameter="Temperature"/>
+                        </Frame.GestureRecognizers>
+
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="temp.png" WidthRequest="60" HeightRequest="60"/>
-                            <Label Text="Temperature" HorizontalOptions="Center" 
-                FontSize="{StaticResource font-label}"
-                FontAttributes="Bold"
-                Style="{StaticResource box-label}"
-                FontFamily="xmas"/>
+                            <Label 
+                                Text="Temperature" HorizontalOptions="Center" 
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/> 
                         </VerticalStackLayout>
 
 
@@ -180,21 +181,31 @@
 
                     <!--Energy-->
                     <Frame
-    HorizontalOptions="Fill"
-    VerticalOptions="Fill"
-    CornerRadius="10"
-    BackgroundColor="{StaticResource bg-light}"
-    Grid.Column="3"
-    Grid.Row="1"
-    >
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="3"
+                        Grid.Row="1">
+
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Tapped="TapGestureRecognizer_Tapped"
+                                CommandParameter="Energy"/>
+                        </Frame.GestureRecognizers>
+
+
+
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="energy.png" WidthRequest="60" HeightRequest="60"/>
-                            <Label Text="Energy" HorizontalOptions="Center" 
-               FontSize="{StaticResource font-label}"
-               FontAttributes="Bold"
-               Style="{StaticResource box-label}"
-               FontFamily="xmas"/>
+                            <Label 
+                                Text="Energy" HorizontalOptions="Center" 
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/>
                         </VerticalStackLayout>
 
 
@@ -203,41 +214,57 @@
 
                     <!--area-->
                     <Frame
-        HorizontalOptions="Fill"
-        VerticalOptions="Fill"
-        CornerRadius="10"
-        BackgroundColor="{StaticResource bg-light}"
-        Grid.Column="0"
-        Grid.Row="2"
-        >
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        >
+
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  CommandParameter="Area"/>
+                        </Frame.GestureRecognizers>
+
+
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="area.png" WidthRequest="60" HeightRequest="60"/>
                             <Label Text="Area" HorizontalOptions="Center" 
-            FontSize="{StaticResource font-label}"
-            FontAttributes="Bold"
-            Style="{StaticResource box-label}"
-            FontFamily="xmas"/>
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/> 
                         </VerticalStackLayout>
 
                     </Frame>
 
                     <!--speed-->
                     <Frame
-    HorizontalOptions="Fill"
-    VerticalOptions="Fill"
-    CornerRadius="10"
-    BackgroundColor="{StaticResource bg-light}"
-    Grid.Column="1"
-    Grid.Row="2">
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        CornerRadius="10"
+                        BackgroundColor="{StaticResource bg-light}"
+                        Grid.Column="1"
+                        Grid.Row="2">
+
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  CommandParameter="Speed"/>
+                        </Frame.GestureRecognizers>
+
+
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="speed.png" WidthRequest="60" HeightRequest="60"/>
                             <Label Text="Speed" HorizontalOptions="Center" 
-            FontSize="{StaticResource font-label}"
-            FontAttributes="Bold"
-            Style="{StaticResource box-label}"
-           FontFamily="xmas"/>
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/>
                         </VerticalStackLayout>
 
 
@@ -247,20 +274,27 @@
 
                     <!--duration-->
                     <Frame
-     HorizontalOptions="Fill"
-     VerticalOptions="Fill"
-     CornerRadius="10"
-     BackgroundColor="{StaticResource bg-light}"
-     Grid.Column="3"
-     Grid.Row="2">
+                         HorizontalOptions="Fill"
+                         VerticalOptions="Fill"
+                         CornerRadius="10"
+                         BackgroundColor="{StaticResource bg-light}"
+                         Grid.Column="3"
+                         Grid.Row="2">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                                  CommandParameter="Duration"/>
+                        </Frame.GestureRecognizers>
+
+
 
                         <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10">
                             <Image Source="duration.png" WidthRequest="60" HeightRequest="60"/>
                             <Label Text="Duration" HorizontalOptions="Center" 
-                FontSize="{StaticResource font-label}"
-                FontAttributes="Bold"
-                Style="{StaticResource box-label}"
-                FontFamily="xmas"/>
+                                FontSize="{StaticResource font-label}"
+                                FontAttributes="Bold"
+                                Style="{StaticResource box-label}"
+                                FontFamily="xmas"/> 
                         </VerticalStackLayout>
 
 

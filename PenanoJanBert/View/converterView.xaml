@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PenanoJanBert.View.converterView">
+    <VerticalStackLayout
+        Padding="26">
+        <Label 
+            Text="{Binding Option}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="30"
+            Margin="0 0 46 0"
+            FontAttributes="Bold"
+           />
+
+
+        <Frame>
+            
+            <VerticalStackLayout 
+                >
+                
+                <Entry Placeholder="Enter value"
+                       Margin="0 0 46 0 "/>
+                <Label 
+                    Text="From"/>
+                <Picker/>
+
+
+                <Label
+                    Text="to"
+                    Margin="40 0 0 0"/>
+                <Picker/>
+
+
+                <Label
+                    
+                    Text="Result"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"
+                    Margin="46 0 0 0"
+                    FontAttributes="Bold"/>
+
+                <Label 
+                    Text="0"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    FontSize="60"/>
+
+
+
+            </VerticalStackLayout>
+
+
+
+
+        </Frame>
+
+        <ContentView x:Name="converterContainer" />
+    </VerticalStackLayout>
+</ContentView>
